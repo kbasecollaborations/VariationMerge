@@ -15,15 +15,15 @@ module VariationMerge {
     typedef structure{
         string obj_name;
         string workspace_name; 
-        list <string> vcflist;   /*change it to featureset later*/
+        list <string> vcflist; 
+        string variation_object_name;  
     } inparams;
    
     typedef structure {
-        string output_obj_ref;
         string report_name;
         string report_ref;
-    } ReportResults; 
+    } OutResults; 
 
-    funcdef run_VariationMerge(inparams params) returns (ReportResults output) authentication required;
+    funcdef run_VariationMerge(inparams params) returns (OutResults output) authentication required;
 
 };

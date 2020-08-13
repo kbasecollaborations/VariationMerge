@@ -63,5 +63,8 @@ class VariationMergeTest(unittest.TestCase):
         #
         # Check returned data with
         # self.assertEqual(ret[...], ...) or other unittest methods
-        ret = self.serviceImpl.run_VariationMerge(self.ctx, {'workspace_name': self.wsName,
-                                                             'parameter_1': 'Hello World!'})
+        ret = self.serviceImpl.run_VariationMerge(self.ctx, {'workspace_name': 'pranjan77:narrative_1596711680507',
+                                                             'vcflist': ['52890/26/1', '52890/21/1'],
+                                                              'variation_object_name': 'merged_set'
+                                                            }
+                                                 )

@@ -16,10 +16,9 @@ class MergeVcfUtils:
         return outfile
 
     def index_vcf(self, vcf_file):
-        bgzipped_vcf = self.bgzip_vcf(vcf_file)
         index_cmd = ["tabix"]
         index_cmd.extend(["-p", "vcf" ])
-        index_cmd.append(bgzipped_vcf)
+        index_cmd.append(vcf_file)
         self.run_cmd(index_cmd)
 
     def run_cmd(self, cmd):
