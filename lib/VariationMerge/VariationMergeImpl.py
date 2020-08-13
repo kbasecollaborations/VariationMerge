@@ -84,7 +84,7 @@ class VariationMerge:
 
 
             print(params['vcflist'][i])
-            vcf_filename = "/kb/module/work/tmp/" + str(i) + ".vcf.gz"
+            vcf_filename = "/kb/module/work/tmp/variation" + str(i) + ".vcf.gz"
             vcf_flist.append(vcf_filename)
 
             inparams = {}
@@ -102,11 +102,11 @@ class VariationMerge:
 
         if(len(genome_set_ref_set) == 0 and len(assembly_ref_set) != 1):
             raise Exception("variation objects are from different assembly refs")
-        '''if(len(sampleset_ref_set) != 1):
+        elif(len(sampleset_ref_set) != 1):
             raise Exception("variation objects are from different sample set refs")
-        if(len(assembly_ref_set) == 0 and len(genome_set_ref_set) != 1):
+        elif(len(assembly_ref_set) == 0 and len(genome_set_ref_set) != 1):
             raise Exception("variation objects are from different genome set refs")
-        '''
+
         merged_file = os.path.join(self.shared_folder, "merged_gatk_variation_jmc2_test.vcf")
         self.mu.merge_vcf(vcf_flist, merged_file)
 
