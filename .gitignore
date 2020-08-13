@@ -1,0 +1,4 @@
+test_local
+sdk.cfg
+*.vcf.gz
+*.vcf.gz.tbi
