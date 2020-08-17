@@ -13,7 +13,6 @@ module VariationMerge {
     */
 
     typedef structure{
-        string obj_name;
         string workspace_name; 
         list <string> vcflist; 
         string variation_object_name;  

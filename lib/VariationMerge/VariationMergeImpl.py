@@ -63,6 +63,7 @@ class VariationMerge:
         #BEGIN run_VariationMerge
 
         self.ws = Workspace(url=self.ws_url, token=ctx['token'])
+
         print(params)
 
         vcf_flist = []

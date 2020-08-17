@@ -2,7 +2,7 @@
     "ver": "0.0.1",
     "authors": [
         "man4ish_gupta",
-	    "pranjan77"
+	"pranjan77"
     ],
     "contact": "",
     "categories": ["active"],
@@ -23,17 +23,17 @@
             }
         },
         {
-    "id" : "variation_object_name",
-    "optional" : false,
-    "advanced" : false,
-    "allow_multiple" : false,
-    "default_values" : [ ],
-    "field_type" : "text",
-    "text_options" : {
-      "valid_ws_types" : ["KBaseGwasData.Variations"],
-      "is_output_name" : true
-     }
-   }
+            "id" : "variation_object_name",
+            "optional" : false,
+            "advanced" : false,
+            "allow_multiple" : false,
+            "default_values" : [ ],
+            "field_type" : "text",
+            "text_options" : {
+                 "valid_ws_types" : ["KBaseGwasData.Variations"],
+                 "is_output_name" : true
+            }
+        }
     ],
     "behavior": {
         "service-mapping": {
@@ -48,12 +48,11 @@
                 {
                     "input_parameter": "vcflist",
                     "target_property": "vcflist",
-		            "target_type_transform": "resolved-ref"
+		    "target_type_transform": "resolved-ref"
                 },
                 {
                     "input_parameter": "variation_object_name",
-                    "target_property": "variation_object_name",
-		            "target_type_transform": "resolved-ref"
+                    "target_property": "variation_object_name"
                 }
             ],
             "output_mapping": [
